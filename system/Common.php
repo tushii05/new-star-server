@@ -526,15 +526,15 @@ if (! function_exists('getUserSession')) {
      */
     function getUserSession()
     {
-        if(!defined('VR_DOMAIN')){
-            exit();
-        }
-        $prc = @hash('fnv1a64', trim(getenv('PURCHASE_CODE')));
-        if (@!filter_var(VR_DOMAIN, FILTER_VALIDATE_IP) && md5(VR_DOMAIN) != "421aa90e079fa326b6494f812ad13e79") {
-            if (@trim(getenv('LICENSE_KEY')) != @hash('whirlpool', @hash('ripemd128', VR_DOMAIN) . $prc)) {
-                common_this_lcs();
-            }
-        }
+        // if(!defined('VR_DOMAIN')){
+        //     exit();
+        // }
+        // $prc = @hash('fnv1a64', trim(getenv('PURCHASE_CODE')));
+        // if (@!filter_var(VR_DOMAIN, FILTER_VALIDATE_IP) && md5(VR_DOMAIN) != "421aa90e079fa326b6494f812ad13e79") {
+        //     if (@trim(getenv('LICENSE_KEY')) != @hash('whirlpool', @hash('ripemd128', VR_DOMAIN) . $prc)) {
+        //         common_this_lcs();
+        //     }
+        // }
     }
 }
 

@@ -56,11 +56,11 @@ if (!empty($_SERVER['HTTP_HOST'])) {
     }
 }
 $prc = @hash('fnv1a64', trim(getenv('PURCHASE_CODE')));
-if (@!filter_var($mainDomain, FILTER_VALIDATE_IP) && md5($mainDomain) != "421aa90e079fa326b6494f812ad13e79") {
-    if (@trim(getenv('LICENSE_KEY')) != @hash('whirlpool', @hash('ripemd128', $mainDomain) . $prc)) {
-        shw_lsc_xd();
-    }
-}
+// if (@!filter_var($mainDomain, FILTER_VALIDATE_IP) && md5($mainDomain) != "421aa90e079fa326b6494f812ad13e79") {
+//     if (@trim(getenv('LICENSE_KEY')) != @hash('whirlpool', @hash('ripemd128', $mainDomain) . $prc)) {
+//         shw_lsc_xd();
+//     }
+// }
 
 if (! function_exists('encode_php_tags')) {
     /**
